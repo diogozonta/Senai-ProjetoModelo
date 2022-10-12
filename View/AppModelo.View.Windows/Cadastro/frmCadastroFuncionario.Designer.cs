@@ -122,6 +122,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(170, 27);
             this.txtNome.TabIndex = 4;
+            this.txtNome.Tag = "Obrigatorio";
             // 
             // label4
             // 
@@ -139,6 +140,7 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(154, 27);
             this.txtCpf.TabIndex = 6;
+            this.txtCpf.Tag = "Obrigatorio";
             // 
             // label5
             // 
@@ -156,6 +158,7 @@
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(154, 27);
             this.txtDataNascimento.TabIndex = 8;
+            this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // txtEmail
@@ -164,6 +167,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(170, 27);
             this.txtEmail.TabIndex = 10;
+            this.txtEmail.Tag = "Obrigatorio";
             // 
             // label6
             // 
@@ -223,6 +227,7 @@
             this.txtEnderecoNumero.Name = "txtEnderecoNumero";
             this.txtEnderecoNumero.Size = new System.Drawing.Size(110, 27);
             this.txtEnderecoNumero.TabIndex = 18;
+            this.txtEnderecoNumero.Tag = "Obrigatorio";
             // 
             // label10
             // 
@@ -356,6 +361,7 @@
             this.cmbNacionalidade.Name = "cmbNacionalidade";
             this.cmbNacionalidade.Size = new System.Drawing.Size(121, 28);
             this.cmbNacionalidade.TabIndex = 33;
+            this.cmbNacionalidade.Tag = "Obrigatorio";
             // 
             // cmbNaturalidade
             // 
@@ -364,6 +370,7 @@
             this.cmbNaturalidade.Name = "cmbNaturalidade";
             this.cmbNaturalidade.Size = new System.Drawing.Size(121, 28);
             this.cmbNaturalidade.TabIndex = 34;
+            this.cmbNaturalidade.Tag = "";
             // 
             // txtTelefoneContato
             // 
@@ -398,6 +405,7 @@
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(141, 27);
             this.txtCep.TabIndex = 38;
+            this.txtCep.Tag = "Obrigatorio";
             // 
             // frmCadastroFuncionario
             // 

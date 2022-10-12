@@ -52,6 +52,7 @@
     <Compile Include="Cadastro\frmCadastroFuncionario.Designer.cs">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Componentes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastro\frmCadastroFuncionario.resx">
