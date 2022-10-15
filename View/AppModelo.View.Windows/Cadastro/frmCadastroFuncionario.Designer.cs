@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +67,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,6 +126,7 @@
             this.txtNome.Size = new System.Drawing.Size(170, 27);
             this.txtNome.TabIndex = 4;
             this.txtNome.Tag = "Obrigatorio";
+            this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
             // label4
             // 
@@ -136,11 +140,12 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(608, 156);
-            this.txtCpf.Mask = "###.###.###-##";
+            this.txtCpf.Mask = "###,###,###-##";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(154, 27);
             this.txtCpf.TabIndex = 6;
             this.txtCpf.Tag = "Obrigatorio";
+            this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
             // 
             // label5
             // 
@@ -160,6 +165,7 @@
             this.txtDataNascimento.TabIndex = 8;
             this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
+            this.txtDataNascimento.Validated += new System.EventHandler(this.txtDataNascimento_Validated);
             // 
             // txtEmail
             // 
@@ -168,6 +174,7 @@
             this.txtEmail.Size = new System.Drawing.Size(170, 27);
             this.txtEmail.TabIndex = 10;
             this.txtEmail.Tag = "Obrigatorio";
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label6
             // 
@@ -408,6 +415,10 @@
             this.txtCep.TabIndex = 38;
             this.txtCep.Tag = "Obrigatorio";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -456,6 +467,7 @@
             this.Text = "frmCadastroFuncionario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,5 +513,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.MaskedTextBox txtCep;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
