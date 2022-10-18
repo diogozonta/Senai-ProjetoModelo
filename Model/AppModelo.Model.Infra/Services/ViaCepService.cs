@@ -1,15 +1,8 @@
 ﻿using AppModelo.Model.Domain.Wrappers;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
 
 namespace AppModelo.Model.Infra.Services
 {
