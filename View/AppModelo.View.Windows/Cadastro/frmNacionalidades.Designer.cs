@@ -32,9 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.dgvNacionalidade = new System.Windows.Forms.DataGridView();
+            this.gvNacionalidades = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,13 +69,13 @@
             this.txtDescricao.Size = new System.Drawing.Size(156, 20);
             this.txtDescricao.TabIndex = 3;
             // 
-            // dgvNacionalidade
+            // gvNacionalidades
             // 
-            this.dgvNacionalidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNacionalidade.Location = new System.Drawing.Point(12, 134);
-            this.dgvNacionalidade.Name = "dgvNacionalidade";
-            this.dgvNacionalidade.Size = new System.Drawing.Size(294, 150);
-            this.dgvNacionalidade.TabIndex = 4;
+            this.gvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNacionalidades.Location = new System.Drawing.Point(12, 134);
+            this.gvNacionalidades.Name = "gvNacionalidades";
+            this.gvNacionalidades.Size = new System.Drawing.Size(294, 150);
+            this.gvNacionalidades.TabIndex = 4;
             // 
             // btnSalvar
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 292);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.dgvNacionalidade);
+            this.Controls.Add(this.gvNacionalidades);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
@@ -101,7 +101,7 @@
             this.Name = "frmNacionalidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNacionalidades";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +113,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.DataGridView dgvNacionalidade;
+        private System.Windows.Forms.DataGridView gvNacionalidades;
         private System.Windows.Forms.Button btnSalvar;
     }
 }

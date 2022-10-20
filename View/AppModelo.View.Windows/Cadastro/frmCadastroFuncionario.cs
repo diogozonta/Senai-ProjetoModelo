@@ -1,4 +1,5 @@
-﻿using AppModelo.Controller.External;
+﻿using AppModelo.Controller.Cadastros;
+using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
@@ -9,10 +10,15 @@ namespace AppModelo.View.Windows.Cadastro
 {
     public partial class frmCadastroFuncionario : Form
     {
+        private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+
         public frmCadastroFuncionario()
         {
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
+
+            cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
+            cmbNacionalidade.DisplayMember = "Descricao";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)

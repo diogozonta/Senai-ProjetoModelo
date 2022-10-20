@@ -1,7 +1,6 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities.Collections;
 using System.Collections.Generic;
 using System.Data;
 
@@ -23,9 +22,12 @@ namespace AppModelo.Model.Infra.Repositories
 
 
         }
-        public bool Atualizar() 
+        public bool Atualizar(int id, string descricao) 
         {
-            return false;
+            var sql = $"UPDATE nacionalidades SET descricao = '{descricao}' WHERE id = {id}";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
         }
         public bool Remover() 
         {
@@ -33,7 +35,7 @@ namespace AppModelo.Model.Infra.Repositories
         }
         public IEnumerable<NacionalidadeEntity> ObterTodos() 
         {
-            var sql = "SELECT * FROM nacionalidades";
+            var sql = "SELECT id, descricao FROM nacionalidades ORDER BY descricao ASC";
             
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
             
