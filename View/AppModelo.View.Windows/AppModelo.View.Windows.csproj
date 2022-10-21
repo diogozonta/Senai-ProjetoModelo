@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro\frmAtualizarDado.cs">
+    <Compile Include="Atualizar\frmAtualizarNacionalidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\frmAtualizarDado.Designer.cs">
-      <DependentUpon>frmAtualizarDado.cs</DependentUpon>
+    <Compile Include="Atualizar\frmAtualizarNacionalidades.Designer.cs">
+      <DependentUpon>frmAtualizarNacionalidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastro\frmCadastroFuncionario.cs">
       <SubType>Form</SubType>
@@ -65,17 +65,35 @@
     <Compile Include="Cadastro\frmNacionalidades.Designer.cs">
       <DependentUpon>frmNacionalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro\frmNaturalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\frmNaturalidades.Designer.cs">
+      <DependentUpon>frmNaturalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Componentes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cadastro\frmAtualizarDado.resx">
-      <DependentUpon>frmAtualizarDado.cs</DependentUpon>
+    <EmbeddedResource Include="Atualizar\frmAtualizarNacionalidades.resx">
+      <DependentUpon>frmAtualizarNacionalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\frmCadastroFuncionario.resx">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\frmNacionalidades.resx">
       <DependentUpon>frmNacionalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\frmNaturalidades.resx">
+      <DependentUpon>frmNaturalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace AppModelo.View.Windows.Cadastro
 {
-    partial class frmAtualizarDado
+    partial class frmAtualizarNacionalidades
     {
         /// <summary>
         /// Required designer variable.
