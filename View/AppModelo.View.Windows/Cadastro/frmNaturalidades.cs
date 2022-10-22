@@ -17,15 +17,17 @@ namespace AppModelo.View.Windows.Cadastro
         public frmNaturalidades()
         {
             InitializeComponent();
+            txtId.Enabled = false;
+
+            gvNaturalidades.DataSource = _naturalidadeController.ObterTodasNaturalidades();
 
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            var dataCriacao = DateTime.UtcNow.ToString();
-            var dataAlteracao = DateTime.UtcNow.ToString();
+            string descricao = txtDescricao.Text.ToUpper();
 
-            var salvou = _naturalidadeController.Cadastrar(txtDescricao.Text, dataCriacao, dataAlteracao, true);
+            var salvou = _naturalidadeController.Cadastrar(descricao, true);
 
             if (salvou)
             {
@@ -38,5 +40,6 @@ namespace AppModelo.View.Windows.Cadastro
 
             }
         }
+
     }
 }

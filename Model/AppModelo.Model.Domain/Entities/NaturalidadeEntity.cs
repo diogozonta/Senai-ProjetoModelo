@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.Types;
+using System;
 
 namespace AppModelo.Model.Domain.Entities
 {
@@ -10,8 +7,8 @@ namespace AppModelo.Model.Domain.Entities
     {
         public int Id { get; set; }
         public string Descricao { get; set; }
-        public string DataCriacao { get; set; }
-        public string DataAlteracao { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public DateTime DataAlteracao { get; set; }
         public bool Ativo { get; set; }
     }
 }
