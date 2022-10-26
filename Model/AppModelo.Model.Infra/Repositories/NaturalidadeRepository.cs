@@ -5,20 +5,17 @@ using MySql.Data.Types;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AppModelo.Model.Infra.Repositories
 {
     public class NaturalidadeRepository
     {
-        public bool Inserir(string descricao, bool ativo)
+        public bool Inserir(string descricao, bool status)
         {
-            string dataCriacao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string dataAlteracao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            var agora = DateTime.Now.ToString("u");
 
-            var sql = $"INSERT INTO naturalidades (descricao, dataCriacao, dataAlteracao, ativo) VALUES ('{descricao}', '{dataCriacao}', '{dataAlteracao}', '{ativo}')";
+            var sql = $"INSERT INTO naturalidades (descricao, dataCriacao, dataAlteracao, ativo) VALUES ('{descricao}', '{agora}', '{agora}', {status})";
             
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
 
@@ -29,13 +26,24 @@ namespace AppModelo.Model.Infra.Repositories
 
         public IEnumerable<NaturalidadeEntity> ObterTodasNaturalidades()
         {
-            var sql = "SELECT id, descricao, dataCriacao, dataAlteracao FROM naturalidades";
+            var sql = "SELECT id, descricao, dataCriacao, dataAlteracao, ativo FROM naturalidades";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
 
-            var resultado = conexaoBd.Query(sql);
+            var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
 
-            return (IEnumerable<NaturalidadeEntity>)resultado;
+            return resultado;
+        }
+
+        public NaturalidadeEntity ObterPorDescricao(string descricao, bool status)
+        {
+            var sql = $"SELECT descricao FROM naturalidades WHERE descricao = '{descricao}'";
+            
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+
+            var resultado = conexaoBd.QuerySingleOrDefault<NaturalidadeEntity>(sql);
+
+            return resultado;
         }
 
     }

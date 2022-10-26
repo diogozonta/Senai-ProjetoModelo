@@ -10,10 +10,16 @@ namespace AppModelo.Controller.Cadastros
 {
     public class NaturalidadeController
     {
-        public bool Cadastrar(string descricao, bool ativo)
+        public bool Cadastrar(string descricao, bool status)
         {
             var repositorio = new NaturalidadeRepository();
-            var resposta = repositorio.Inserir(descricao, ativo);
+            
+            var naturalidade = repositorio.ObterPorDescricao(descricao, status);
+            
+            if (naturalidade is not null) return false;
+
+            var resposta = repositorio.Inserir(descricao, status);
+            
             return resposta;
         }
 
@@ -23,5 +29,6 @@ namespace AppModelo.Controller.Cadastros
             var resposta = repositorio.ObterTodasNaturalidades();
             return (List<NaturalidadeEntity>)resposta;
         }
+
     }
 }

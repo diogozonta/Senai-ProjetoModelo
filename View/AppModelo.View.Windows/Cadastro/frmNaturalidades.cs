@@ -1,4 +1,5 @@
 ﻿using AppModelo.Controller.Cadastros;
+using AppModelo.Model.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace AppModelo.View.Windows.Cadastro
     public partial class frmNaturalidades : Form
     {    
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
+
         public frmNaturalidades()
         {
             InitializeComponent();
@@ -25,20 +27,20 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            var charEhNumero = Helpers.Componentes.CharEhNumero(txtDescricao.Text);
+
+            if(charEhNumero)
+            {
+                errorProvider1.SetError(txtDescricao,"Naturalidade não pode conter números");
+                txtDescricao.Focus();
+                return;
+            }
+           
+
             string descricao = txtDescricao.Text.ToUpper();
 
-            var salvou = _naturalidadeController.Cadastrar(descricao, true);
+            var salvou = _naturalidadeController.Cadastrar(descricao, chkAtivo.Checked);
 
-            if (salvou)
-            {
-                MessageBox.Show("Naturalidade cadastrada com sucesso!", "Sucesso" + MessageBoxIcon.Information + MessageBoxButtons.OK);
-            }
-            
-            else
-            {
-                MessageBox.Show("Erro ao acessar banco de dados!", "Erro" + MessageBoxIcon.Error + MessageBoxButtons.OK);
-
-            }
         }
 
     }

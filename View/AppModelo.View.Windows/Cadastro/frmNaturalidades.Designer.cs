@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,13 +38,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gvNaturalidades = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 7);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
@@ -51,14 +57,14 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(136, 23);
+            this.txtId.Location = new System.Drawing.Point(12, 25);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 1;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(136, 65);
+            this.txtDescricao.Location = new System.Drawing.Point(12, 64);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(100, 20);
             this.txtDescricao.TabIndex = 3;
@@ -66,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(136, 49);
+            this.label2.Location = new System.Drawing.Point(12, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
@@ -93,6 +99,7 @@
             this.gvNaturalidades.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvNaturalidades.Location = new System.Drawing.Point(12, 139);
             this.gvNaturalidades.Name = "gvNaturalidades";
+            this.gvNaturalidades.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,12 +108,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvNaturalidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.gvNaturalidades.Size = new System.Drawing.Size(362, 201);
+            this.gvNaturalidades.Size = new System.Drawing.Size(342, 201);
             this.gvNaturalidades.TabIndex = 6;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(136, 91);
+            this.btnCadastrar.Location = new System.Drawing.Point(239, 43);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(100, 40);
             this.btnCadastrar.TabIndex = 8;
@@ -114,11 +121,28 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAtivo.Location = new System.Drawing.Point(12, 90);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 9;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
             // frmNaturalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 346);
+            this.ClientSize = new System.Drawing.Size(364, 347);
+            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.txtDescricao);
@@ -128,6 +152,7 @@
             this.Name = "frmNaturalidades";
             this.Text = "frmNaturalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +166,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView gvNaturalidades;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox chkAtivo;
     }
 }

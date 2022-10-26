@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Helpers
 {
-    internal class Componentes
+    internal static partial class Componentes
     {
         internal static void FormatarCamposObrigatorios(Form frm)
         {

@@ -93,7 +93,7 @@ namespace AppModelo.View.Windows.Cadastro
 
             if(dataNascimento > dataHoje)
             {
-                errorProvider.SetError(txtDataNascimento, "Você não pode informar uma data de hoje");
+                errorProvider.SetError(txtDataNascimento, "Você não pode informar a data de hoje");
                 return;
             }
 
