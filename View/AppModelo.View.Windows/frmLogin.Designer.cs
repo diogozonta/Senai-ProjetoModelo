@@ -1,4 +1,6 @@
-﻿namespace AppModelo.View.Windows
+﻿using System.Drawing;
+
+namespace AppModelo.View.Windows
 {
     partial class frmLogin
     {
@@ -28,12 +30,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEsqueciSenha = new System.Windows.Forms.LinkLabel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +84,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(43, 139);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(249, 20);
             this.txtSenha.TabIndex = 5;
             // 
@@ -91,6 +97,10 @@
             this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Senha";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmLogin
             // 
@@ -105,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +129,6 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
