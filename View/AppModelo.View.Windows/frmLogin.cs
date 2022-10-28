@@ -21,10 +21,6 @@ namespace AppModelo.View.Windows
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            var form = new frmPrincipal();
-            form.Show();
-            this.Hide();
-
             var email = txtEmail.Text;
 
             var emailEhValido = Validadores.EmailEValido(email);
@@ -42,8 +38,8 @@ namespace AppModelo.View.Windows
 
             if (usuarioEncontrado)
             {
-                var formDois = new frmPrincipal();
-                formDois.Show();
+                var form = new frmPrincipal();
+                form.Show();
                 this.Hide();
             }
             else

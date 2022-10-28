@@ -1,4 +1,5 @@
-﻿using AppModelo.Model.Domain.Validators;
+﻿using AppModelo.Controller.Seguranca;
+using AppModelo.Model.Domain.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace AppModelo.View.Windows
             InitializeComponent();
         }
 
-        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        private void btnRecuperarAcesso_Click(object sender, EventArgs e)
         {
             var email = txtEmail.Text;
 
@@ -27,17 +28,15 @@ namespace AppModelo.View.Windows
             if (emailEhValido is false)
             {
                 errorProvider1.SetError(txtEmail, "E-mail é inválido");
+                txtEmail.Focus();
                 return;
             }
 
-            errorProvider1.Clear();
-        }
+            var controller = new UsuarioController();
+            var resultado = controller.RecuperarSenha(txtEmail.Text);
+            MessageBox.Show(resultado);
 
-        private void btnRecuperarAcesso_Click(object sender, EventArgs e)
-        {
-            var form = new frmLogin();
-            form.Show();
-            this.Hide();
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
