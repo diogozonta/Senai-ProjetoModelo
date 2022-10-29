@@ -1,4 +1,5 @@
 ﻿using MailKit.Net.Smtp;
+using MailKit.Security;
 using MimeKit;
 using System;
 
@@ -11,7 +12,7 @@ namespace AppModelo.Model.Infra.Services
             try
             {
                 var mimeMessage = new MimeMessage();
-                mimeMessage.From.Add(new MailboxAddress("Sistema Senai", "user_senai_temp@faceli.edu.br"));
+                mimeMessage.From.Add(new MailboxAddress("Sistema Senai", "teste@wwonline.com.br"));
                 mimeMessage.To.Add(new MailboxAddress(nome, email));
                 mimeMessage.Subject = assunto;
 
@@ -22,9 +23,9 @@ namespace AppModelo.Model.Infra.Services
 
                 using (var client = new SmtpClient())
                 {
-                    client.Connect("smtp.gmail.com", 587, false);
+                    client.Connect("smtp.gmail.com", 587, SecureSocketOptions.Auto);
 
-                    client.Authenticate("user_senai_temp@faceli.edu.br", "senai@2022");
+                    client.Authenticate("welton.castoldi@docente.senai.br", "thjqhgtpctrhbugt");
 
                     client.Send(mimeMessage);
                     client.Disconnect(true);

@@ -4,6 +4,7 @@ using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastro
@@ -11,6 +12,7 @@ namespace AppModelo.View.Windows.Cadastro
     public partial class frmCadastroFuncionario : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+        private NaturalidadeController _naturalidadeController = new NaturalidadeController();
 
         public frmCadastroFuncionario()
         {
@@ -19,6 +21,9 @@ namespace AppModelo.View.Windows.Cadastro
 
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+
+            cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
+            cmbNaturalidade.DisplayMember = "Descricao";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
@@ -99,5 +104,6 @@ namespace AppModelo.View.Windows.Cadastro
 
             errorProvider.Clear();
         }
+
     }
 }

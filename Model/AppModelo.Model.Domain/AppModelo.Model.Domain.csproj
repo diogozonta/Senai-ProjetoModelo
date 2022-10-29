@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\FuncionarioEntity.cs" />
     <Compile Include="Entities\NacionalidadeEntity.cs" />
     <Compile Include="Entities\NaturalidadeEntity.cs" />
     <Compile Include="Entities\UsuarioEntity.cs" />

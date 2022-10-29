@@ -68,6 +68,7 @@
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(17, 156);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(72, 27);
@@ -192,6 +194,7 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(154, 27);
             this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.Tag = "Obrigatorio";
             // 
             // label7
             // 
@@ -364,6 +367,7 @@
             // cmbNacionalidade
             // 
             this.cmbNacionalidade.FormattingEnabled = true;
+            this.cmbNacionalidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cmbNacionalidade.Location = new System.Drawing.Point(17, 223);
             this.cmbNacionalidade.Name = "cmbNacionalidade";
             this.cmbNacionalidade.Size = new System.Drawing.Size(121, 28);
@@ -377,7 +381,7 @@
             this.cmbNaturalidade.Name = "cmbNaturalidade";
             this.cmbNaturalidade.Size = new System.Drawing.Size(121, 28);
             this.cmbNaturalidade.TabIndex = 34;
-            this.cmbNaturalidade.Tag = "";
+            this.cmbNaturalidade.Tag = "Obrigatorio";
             // 
             // txtTelefoneContato
             // 
@@ -419,11 +423,22 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(245, 564);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(262, 54);
+            this.btnCadastrar.TabIndex = 39;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 550);
+            this.ClientSize = new System.Drawing.Size(772, 630);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtTelefoneContato);
@@ -462,7 +477,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Yu Gothic UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmCadastroFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroFuncionario";
@@ -515,5 +532,6 @@
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.MaskedTextBox txtCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

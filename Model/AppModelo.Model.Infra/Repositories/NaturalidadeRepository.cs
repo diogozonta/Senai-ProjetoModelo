@@ -29,7 +29,7 @@ namespace AppModelo.Model.Infra.Repositories
             var sql = "SELECT id, descricao, dataCriacao, dataAlteracao, ativo FROM naturalidades";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
-
+            
             var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
 
             return resultado;

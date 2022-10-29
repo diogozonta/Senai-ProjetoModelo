@@ -35,7 +35,6 @@ namespace AppModelo.Controller.Seguranca
             {
                 return "Usuario não foi encontrado";
             }
-            return "";
 
             // 2º PASSO: GERAR UMA SENHA NOVA E GRAVAR NO BD.
             var novaSenha = Guid.NewGuid().ToString("N").Substring(0, 8).ToUpper();

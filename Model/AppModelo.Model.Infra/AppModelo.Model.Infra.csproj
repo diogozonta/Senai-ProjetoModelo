@@ -99,6 +99,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Databases\MySql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\FuncionarioRepository.cs" />
     <Compile Include="Repositories\NacionalidadeRepository.cs" />
     <Compile Include="Repositories\NaturalidadeRepository.cs" />
     <Compile Include="Repositories\UsuarioRepository.cs" />
@@ -117,6 +118,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="_Sql\create_table_funcionarios.sql" />
     <Content Include="_Sql\create_table_nacionalidades.sql" />
     <Content Include="_Sql\create_table_naturalidades.sql" />
   </ItemGroup>
