@@ -11,6 +11,7 @@ namespace AppModelo.View.Windows.Cadastro
 {
     public partial class frmCadastroFuncionario : Form
     {
+        private FuncionarioController _funcionarioController = new FuncionarioController();
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
 
@@ -38,6 +39,7 @@ namespace AppModelo.View.Windows.Cadastro
             txtEnderecoLogradouro.Text = endereco.Logradouro;
             txtEnderecoMunicipio.Text = endereco.Localidade;
             txtEnderecoUf.Text = endereco.Uf;
+
         }
 
         private void txtNome_Validating(object sender, CancelEventArgs e)
@@ -105,5 +107,21 @@ namespace AppModelo.View.Windows.Cadastro
             errorProvider.Clear();
         }
 
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+            int numero = int.Parse(txtEnderecoNumero.Text);
+
+            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, 1, 1);
+
+            if (salvou)
+            {
+                MessageBox.Show("Cadastrado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar usuário");
+            }
+        }
     }
 }

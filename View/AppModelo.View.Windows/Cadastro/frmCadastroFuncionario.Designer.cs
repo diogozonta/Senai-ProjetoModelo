@@ -161,7 +161,7 @@
             // txtDataNascimento
             // 
             this.txtDataNascimento.Location = new System.Drawing.Point(314, 156);
-            this.txtDataNascimento.Mask = "00/00/0000";
+            this.txtDataNascimento.Mask = "0000/00/00";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(154, 27);
             this.txtDataNascimento.TabIndex = 8;
@@ -318,6 +318,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Checked = true;
             this.rbMasculino.Location = new System.Drawing.Point(495, 156);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(94, 24);
@@ -333,7 +334,6 @@
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(87, 24);
             this.rbFeminino.TabIndex = 28;
-            this.rbFeminino.TabStop = true;
             this.rbFeminino.Text = "Feminino";
             this.rbFeminino.UseVisualStyleBackColor = true;
             // 
@@ -432,6 +432,7 @@
             this.btnCadastrar.TabIndex = 39;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // frmCadastroFuncionario
             // 

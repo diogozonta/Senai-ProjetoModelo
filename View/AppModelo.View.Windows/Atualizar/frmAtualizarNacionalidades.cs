@@ -18,12 +18,15 @@ namespace AppModelo.View.Windows.Cadastro
         public frmAtualizarNacionalidades()
         {
             InitializeComponent();
+
+            var todasnacionalidades = new NacionalidadeRepository();
+            dgvNacionalidades.DataSource = todasnacionalidades.ObterTodos();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtId.Text);
-            var atualizarDado = _nacionalidadeController.AtualizarDado(id, txtDescricao.Text);
+            var atualizarDado = _nacionalidadeController.AtualizarDado(id, txtDescricao.Text.ToUpper()) ;
 
             if (atualizarDado = true)
             {
@@ -32,9 +35,10 @@ namespace AppModelo.View.Windows.Cadastro
 
             else
             {
-                MessageBox.Show("Problema ao conectar com banco de dados", "Problema ao atualizar!!" + MessageBoxIcon.Error + MessageBoxButtons.OK);
-
+                MessageBox.Show("Ocorreu um poblema ao atualizar o dado, tente novamente.", "Problema ao atualizar!!" + MessageBoxIcon.Error + MessageBoxButtons.OK);
             }
         }
+
+
     }
 }

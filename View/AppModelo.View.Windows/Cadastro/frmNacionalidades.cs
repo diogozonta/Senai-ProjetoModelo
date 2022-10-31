@@ -18,6 +18,7 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+
             var salvou = _nacionalidadeController.Cadastrar(txtDescricao.Text);
             
             if (salvou)

@@ -1,21 +1,21 @@
-CREATE TABLE funcionarios 
-(
-	id INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE funcionarios (
+	id int PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	nome_completo varchar(250) NOT NULL,
-	data_nascimento datetime NOT NULL,
+	data_nascimento date NOT NULL,
 	sexo bool NOT NULL,
-	cpf varchar(14) NOT NULL,
-	nacionalidade varchar(150) NOT NULL,
-	naturalidade varchar(150) NOT NULL,
-	email varchar(200) NOT NULL,
+	email varchar(250) NOT NULL,
 	telefone varchar(14) NOT NULL,
 	telefone_contato varchar(14),
-	cep varchar(9) NOT NULL,
-	logradouro varchar(100) NOT NULL,
+	cep varchar(14) NOT NULL,
+	logradouro varchar(50),
 	numero int NOT NULL,
-	complemento varchar(100),
-	bairro varchar(100) NOT NULL,
-	municipio varchar(100) NOT NULL,
+	complemento varchar(250),
+	bairro varchar(250) NOT NULL,
+	municipio varchar(250) NOT NULL,
 	uf varchar(2) NOT NULL,
-	CONSTRAINT pk_funcionarios_id PRIMARY KEY (id)
+	fk_nacionalidade int NOT NULL,
+	fk_naturalidade int NOT NULL,
+	FOREIGN KEY (fk_naturalidade) REFERENCES naturalidades(id),
+	FOREIGN KEY (fk_nacionalidade) REFERENCES nacionalidades(id)
+	
 );
