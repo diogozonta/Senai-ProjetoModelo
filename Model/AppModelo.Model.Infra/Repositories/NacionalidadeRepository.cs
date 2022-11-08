@@ -35,7 +35,7 @@ namespace AppModelo.Model.Infra.Repositories
         }
         public IEnumerable<NacionalidadeEntity> ObterTodos()
         {
-            var sql = "SELECT id, descricao FROM nacionalidades ORDER BY descricao ASC";
+            var sql = "SELECT id, descricao FROM nacionalidades";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
 

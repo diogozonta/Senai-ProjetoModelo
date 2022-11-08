@@ -98,7 +98,7 @@ namespace AppModelo.View.Windows.Cadastro
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             var dataHoje = DateTime.Now;
 
-            if(dataNascimento > dataHoje)
+            if  (dataNascimento > dataHoje)
             {
                 errorProvider.SetError(txtDataNascimento, "Você não pode informar a data de hoje");
                 return;
@@ -109,18 +109,31 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-            int numero = int.Parse(txtEnderecoNumero.Text);
-
-            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, 1, 1);
-
-            if (salvou)
+            try
             {
-                MessageBox.Show("Cadastrado com sucesso");
+                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+                int numero = int.Parse(txtEnderecoNumero.Text);
+
+                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex + 1);
+
+                if (salvou)
+                {
+                    MessageBox.Show("Cadastrado com sucesso");
+
+                    var txtClear = new LimparTela();
+
+                    txtClear.LimparCampos(this.Controls);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar usuário");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Erro ao cadastrar usuário");
+                MessageBox.Show("Ocorreu algum problema ao cadastrar no banco de dados, verifique os dados colocados novamente.", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

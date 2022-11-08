@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="Helpers\CharEhNumero.cs" />
     <Compile Include="Helpers\Componentes.cs" />
+    <Compile Include="Helpers\LimparTela.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Atualizar\frmAtualizarNacionalidades.resx">
