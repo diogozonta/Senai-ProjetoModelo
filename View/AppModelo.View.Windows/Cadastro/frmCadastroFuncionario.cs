@@ -95,16 +95,24 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void txtDataNascimento_Validated(object sender, EventArgs e)
         {
-            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-            var dataHoje = DateTime.Now;
-
-            if  (dataNascimento > dataHoje)
+            try
             {
-                errorProvider.SetError(txtDataNascimento, "Você não pode informar a data de hoje");
-                return;
+                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+                var dataHoje = DateTime.Now;
+
+                if (dataNascimento > dataHoje)
+                {
+                    errorProvider.SetError(txtDataNascimento, "Você não pode informar a data de hoje");
+                    return;
+                }
+
+                errorProvider.Clear();
+            }
+            catch (Exception)
+            {
+                return;       
             }
 
-            errorProvider.Clear();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

@@ -18,8 +18,9 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            string descricao = txtDescricao.Text.ToUpper();
 
-            var salvou = _nacionalidadeController.Cadastrar(txtDescricao.Text);
+            var salvou = _nacionalidadeController.Cadastrar(descricao);
             
             if (salvou)
             {

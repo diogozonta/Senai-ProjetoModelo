@@ -53,6 +53,12 @@
     <Compile Include="Atualizar\frmAtualizarNacionalidades.Designer.cs">
       <DependentUpon>frmAtualizarNacionalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Atualizar\frmAtualizarNaturalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atualizar\frmAtualizarNaturalidades.Designer.cs">
+      <DependentUpon>frmAtualizarNaturalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro\frmCadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>

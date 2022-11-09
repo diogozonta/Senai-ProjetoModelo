@@ -31,6 +31,10 @@ namespace AppModelo.View.Windows.Cadastro
             if (atualizarDado = true)
             {
                 MessageBox.Show("Dado atualizado com sucesso", "Sucesso ao atualizar!" + MessageBoxIcon.Information + MessageBoxButtons.OK);
+                var todasnacionalidades = new NacionalidadeRepository();
+                txtDescricao.Text = string.Empty;
+                txtId.Text = string.Empty;
+                dgvNacionalidades.DataSource = todasnacionalidades.ObterTodos();
             }
 
             else
@@ -38,7 +42,5 @@ namespace AppModelo.View.Windows.Cadastro
                 MessageBox.Show("Ocorreu um poblema ao atualizar o dado, tente novamente.", "Problema ao atualizar!!" + MessageBoxIcon.Error + MessageBoxButtons.OK);
             }
         }
-
-
     }
 }
