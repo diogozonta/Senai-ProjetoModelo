@@ -46,7 +46,7 @@
             this.atualizarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(705, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(796, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,7 +57,7 @@
             this.nacionalidadeToolStripMenuItem,
             this.naturalidadeToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // novoFuncionárioToolStripMenuItem
@@ -87,27 +87,27 @@
             this.nacionalidadeToolStripMenuItem1,
             this.naturalidadeToolStripMenuItem1});
             this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.atualizarToolStripMenuItem.Text = "Atualizar";
             // 
             // nacionalidadeToolStripMenuItem1
             // 
             this.nacionalidadeToolStripMenuItem1.Name = "nacionalidadeToolStripMenuItem1";
-            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.nacionalidadeToolStripMenuItem1.Text = "Nacionalidade";
             this.nacionalidadeToolStripMenuItem1.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem1_Click);
             // 
             // naturalidadeToolStripMenuItem1
             // 
             this.naturalidadeToolStripMenuItem1.Name = "naturalidadeToolStripMenuItem1";
-            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.naturalidadeToolStripMenuItem1.Text = "Naturalidade";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 383);
+            this.ClientSize = new System.Drawing.Size(796, 405);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";

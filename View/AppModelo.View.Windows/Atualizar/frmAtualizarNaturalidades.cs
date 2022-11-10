@@ -15,6 +15,7 @@ namespace AppModelo.View.Windows.Atualizar
         public frmAtualizarNaturalidades()
         {
             InitializeComponent();
+
         }
     }
 }
