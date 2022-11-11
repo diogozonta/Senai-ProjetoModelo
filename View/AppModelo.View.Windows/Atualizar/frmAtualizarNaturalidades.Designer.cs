@@ -33,8 +33,8 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.dgvNacionalidades = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).BeginInit();
+            this.dgvNaturalidades = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNaturalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,30 +80,31 @@
             this.btnEnviar.TabIndex = 4;
             this.btnEnviar.Text = "ATUALIZAR";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // dgvNacionalidades
+            // dgvNaturalidades
             // 
-            this.dgvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNacionalidades.Location = new System.Drawing.Point(22, 61);
-            this.dgvNacionalidades.Name = "dgvNacionalidades";
-            this.dgvNacionalidades.Size = new System.Drawing.Size(331, 188);
-            this.dgvNacionalidades.TabIndex = 5;
+            this.dgvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNaturalidades.Location = new System.Drawing.Point(22, 61);
+            this.dgvNaturalidades.Name = "dgvNaturalidades";
+            this.dgvNaturalidades.Size = new System.Drawing.Size(331, 188);
+            this.dgvNaturalidades.TabIndex = 5;
             // 
-            // frmAtualizarNacionalidades
+            // frmAtualizarNaturalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 270);
-            this.Controls.Add(this.dgvNacionalidades);
+            this.Controls.Add(this.dgvNaturalidades);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
-            this.Name = "frmAtualizarNacionalidades";
+            this.Name = "frmAtualizarNaturalidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAtualizarDado";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNaturalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,7 +117,7 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.DataGridView dgvNacionalidades;
+        private System.Windows.Forms.DataGridView dgvNaturalidades;
 
     }
     

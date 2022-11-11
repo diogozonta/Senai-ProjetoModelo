@@ -38,7 +38,15 @@ namespace AppModelo.Model.Infra.Repositories
 
         public bool Atualizar(int id, string descricao)
         {
-            var sql = $"UPDATE naturalidades SET descricao = {descricao} WHERE id = {id}";
+            var sql = $"UPDATE naturalidades SET descricao = '{descricao}' WHERE id = {id}";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+        }
+
+        public bool Deletar(int id)
+        {
+            var sql = $"DELETE FROM naturalidades WHERE id = '{id}'";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;

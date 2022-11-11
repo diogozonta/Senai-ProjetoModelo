@@ -1,4 +1,6 @@
-﻿using AppModelo.View.Windows.Cadastro;
+﻿using AppModelo.View.Windows.Atualizar;
+using AppModelo.View.Windows.Cadastro;
+using AppModelo.View.Windows.Deletar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +44,27 @@ namespace AppModelo.View.Windows
         private void naturalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmNaturalidades();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void naturalidadeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new frmAtualizarNaturalidades();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void nacionalidadeToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var form = new frmDeletarNacionalidade();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void naturalidadeToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var form = new frmDeletarNaturalidade();
             form.MdiParent = this;
             form.Show();
         }

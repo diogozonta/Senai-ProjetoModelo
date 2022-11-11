@@ -114,6 +114,7 @@ namespace AppModelo.View.Windows
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

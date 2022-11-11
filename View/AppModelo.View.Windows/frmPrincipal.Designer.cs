@@ -36,6 +36,9 @@
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nacionalidadeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.naturalidadeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nacionalidadeToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.naturalidadeToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +46,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
-            this.atualizarToolStripMenuItem});
+            this.atualizarToolStripMenuItem,
+            this.deletarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(796, 24);
@@ -57,27 +61,27 @@
             this.nacionalidadeToolStripMenuItem,
             this.naturalidadeToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // novoFuncionárioToolStripMenuItem
             // 
             this.novoFuncionárioToolStripMenuItem.Name = "novoFuncionárioToolStripMenuItem";
-            this.novoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.novoFuncionárioToolStripMenuItem.Text = "Novo funcionário";
             this.novoFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.novoFuncionárioToolStripMenuItem_Click);
             // 
             // nacionalidadeToolStripMenuItem
             // 
             this.nacionalidadeToolStripMenuItem.Name = "nacionalidadeToolStripMenuItem";
-            this.nacionalidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nacionalidadeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.nacionalidadeToolStripMenuItem.Text = "Nacionalidade";
             this.nacionalidadeToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem_Click);
             // 
             // naturalidadeToolStripMenuItem
             // 
             this.naturalidadeToolStripMenuItem.Name = "naturalidadeToolStripMenuItem";
-            this.naturalidadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.naturalidadeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.naturalidadeToolStripMenuItem.Text = "Naturalidade";
             this.naturalidadeToolStripMenuItem.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem_Click);
             // 
@@ -87,21 +91,45 @@
             this.nacionalidadeToolStripMenuItem1,
             this.naturalidadeToolStripMenuItem1});
             this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.atualizarToolStripMenuItem.Text = "Atualizar";
             // 
             // nacionalidadeToolStripMenuItem1
             // 
             this.nacionalidadeToolStripMenuItem1.Name = "nacionalidadeToolStripMenuItem1";
-            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.nacionalidadeToolStripMenuItem1.Text = "Nacionalidade";
             this.nacionalidadeToolStripMenuItem1.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem1_Click);
             // 
             // naturalidadeToolStripMenuItem1
             // 
             this.naturalidadeToolStripMenuItem1.Name = "naturalidadeToolStripMenuItem1";
-            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.naturalidadeToolStripMenuItem1.Text = "Naturalidade";
+            this.naturalidadeToolStripMenuItem1.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem1_Click);
+            // 
+            // deletarToolStripMenuItem
+            // 
+            this.deletarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nacionalidadeToolStripMenuItem2,
+            this.naturalidadeToolStripMenuItem2});
+            this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.deletarToolStripMenuItem.Text = "Deletar";
+            // 
+            // nacionalidadeToolStripMenuItem2
+            // 
+            this.nacionalidadeToolStripMenuItem2.Name = "nacionalidadeToolStripMenuItem2";
+            this.nacionalidadeToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.nacionalidadeToolStripMenuItem2.Text = "Nacionalidade";
+            this.nacionalidadeToolStripMenuItem2.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem2_Click);
+            // 
+            // naturalidadeToolStripMenuItem2
+            // 
+            this.naturalidadeToolStripMenuItem2.Name = "naturalidadeToolStripMenuItem2";
+            this.naturalidadeToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.naturalidadeToolStripMenuItem2.Text = "Naturalidade";
+            this.naturalidadeToolStripMenuItem2.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem2_Click);
             // 
             // frmPrincipal
             // 
@@ -131,5 +159,8 @@
         private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem naturalidadeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nacionalidadeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nacionalidadeToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem naturalidadeToolStripMenuItem2;
     }
 }
