@@ -3,19 +3,24 @@ using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppModelo.View.Windows.Cadastro
+namespace AppModelo.View.Windows.Cadastros
 {
-    public partial class frmCadastroFuncionario : Form
+    public partial class frmFuncionario : Form
     {
         private FuncionarioController _funcionarioController = new FuncionarioController();
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
 
-        public frmCadastroFuncionario()
+        public frmFuncionario()
         {
             InitializeComponent();
             Componentes.FormatarCamposObrigatorios(this);
@@ -35,17 +40,17 @@ namespace AppModelo.View.Windows.Cadastro
             //Recebo os dados do metódo para obter o endereço
             var endereco = cepController.Obter(txtCep.Text);
 
-            txtEnderecoBairro.Text = endereco.Bairro;
-            txtEnderecoLogradouro.Text = endereco.Logradouro;
-            txtEnderecoMunicipio.Text = endereco.Localidade;
-            txtEnderecoUf.Text = endereco.Uf;
+            txtBairro.Text = endereco.Bairro;
+            txtLogradouro.Text = endereco.Logradouro;
+            txtMunicipio.Text = endereco.Localidade;
+            txtUf.Text = endereco.Uf;
 
         }
 
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
             // primeira regra para verificar se o nome é < que 6 letras.
-            if(txtNome.Text.Length < 6)
+            if (txtNome.Text.Length < 6)
             {
                 errorProvider.SetError(txtNome, "Digite seu nome completo");
                 return;
@@ -75,7 +80,7 @@ namespace AppModelo.View.Windows.Cadastro
                 errorProvider.SetError(txtCpf, "CPF inválido!");
                 return;
             }
-            
+
             errorProvider.Clear();
         }
 
@@ -110,7 +115,7 @@ namespace AppModelo.View.Windows.Cadastro
             }
             catch (Exception)
             {
-                return;       
+                return;
             }
 
         }
@@ -120,9 +125,9 @@ namespace AppModelo.View.Windows.Cadastro
             try
             {
                 var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-                int numero = int.Parse(txtEnderecoNumero.Text);
+                int numero = int.Parse(txtNumero.Text);
 
-                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex + 1);
+                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtLogradouro.Text, numero, txtComplemento.Text, txtBairro.Text, txtMunicipio.Text, txtUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex + 1);
 
                 if (salvou)
                 {

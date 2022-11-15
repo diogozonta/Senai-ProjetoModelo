@@ -6,14 +6,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppModelo.View.Windows
 {
+
     public partial class frmLogin : Form
     {
+        //Crio uma variável global para colocar no txtEmail
+        public static string SetNomeUsuario = "";
+
         public frmLogin()
         {
             InitializeComponent();
@@ -40,13 +46,16 @@ namespace AppModelo.View.Windows
 
             if (usuarioEncontrado)
             {
-                var form = new frmPrincipal();
+                //Coloco o txtEmail dentro da variável global para passar para o frmPrincipalNovo
+                SetNomeUsuario = txtEmail.Text;
+
+                var form = new frmPrincipalNovo();
                 form.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Usuário ou senha não encontrado");
+                MessageBox.Show("Confira o e-mail/senha e tente novamente.", "E-mail ou senha não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -58,5 +67,19 @@ namespace AppModelo.View.Windows
             this.Hide();
         }
 
+        private void btnFechar_Click(object sender, EventArgs e)
+        { 
+            this.Close();
+        }
+
+        private void btnFechar_MouseHover(object sender, EventArgs e)
+        {
+            btnFechar.BackColor = Color.FromArgb(170, 57, 57);
+        }
+
+        private void btnFechar_MouseLeave(object sender, EventArgs e)
+        {
+            btnFechar.BackColor = Color.White;
+        }
     }
 }

@@ -45,5 +45,16 @@ namespace AppModelo.View.Windows
             form.Show();
             this.Hide();
         }
+
+        private void btnCancelar_MouseHover(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.FromArgb(13, 108, 139);
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackColor = Color.FromArgb(255, 255, 255);
+
+        }
     }
 }

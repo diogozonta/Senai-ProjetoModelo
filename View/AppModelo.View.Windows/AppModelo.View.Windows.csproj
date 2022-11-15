@@ -59,23 +59,23 @@
     <Compile Include="Atualizar\frmAtualizarNaturalidades.Designer.cs">
       <DependentUpon>frmAtualizarNaturalidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro\frmCadastroFuncionario.cs">
+    <Compile Include="Cadastros\frmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\frmCadastroFuncionario.Designer.cs">
-      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    <Compile Include="Cadastros\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro\frmNacionalidades.cs">
+    <Compile Include="Cadastros\frmNacionalidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\frmNacionalidades.Designer.cs">
-      <DependentUpon>frmNacionalidades.cs</DependentUpon>
+    <Compile Include="Cadastros\frmNacionalidade.Designer.cs">
+      <DependentUpon>frmNacionalidade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro\frmNaturalidades.cs">
+    <Compile Include="Cadastros\frmNaturalidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\frmNaturalidades.Designer.cs">
-      <DependentUpon>frmNaturalidades.cs</DependentUpon>
+    <Compile Include="Cadastros\frmNaturalidade.Designer.cs">
+      <DependentUpon>frmNaturalidade.cs</DependentUpon>
     </Compile>
     <Compile Include="Deletar\frmDeletarNacionalidade.cs">
       <SubType>Form</SubType>
@@ -95,11 +95,11 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="frmPrincipalNovo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="frmPrincipalNovo.Designer.cs">
+      <DependentUpon>frmPrincipalNovo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRecuperarSenha.cs">
       <SubType>Form</SubType>
@@ -118,14 +118,14 @@
     <EmbeddedResource Include="Atualizar\frmAtualizarNaturalidades.resx">
       <DependentUpon>frmAtualizarNaturalidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\frmCadastroFuncionario.resx">
-      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\frmNacionalidades.resx">
-      <DependentUpon>frmNacionalidades.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\frmNacionalidade.resx">
+      <DependentUpon>frmNacionalidade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro\frmNaturalidades.resx">
-      <DependentUpon>frmNaturalidades.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastros\frmNaturalidade.resx">
+      <DependentUpon>frmNaturalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deletar\frmDeletarNacionalidade.resx">
       <DependentUpon>frmDeletarNacionalidade.cs</DependentUpon>
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalNovo.resx">
+      <DependentUpon>frmPrincipalNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarSenha.resx">
       <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
@@ -177,6 +177,18 @@
       <Project>{a98c4809-5a97-423f-957d-9259e53bbd08}</Project>
       <Name>AppModelo.Model.Infra</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_assets\configuracoesIcon.png" />
+    <Content Include="_assets\relatorioIcon.png" />
+    <Content Include="_assets\cidadeIcon.png" />
+    <Content Include="_assets\globoIcon.png" />
+    <Content Include="_assets\AppModeloLogo.png" />
+    <Content Include="_assets\backIcon24px.png" />
+    <Content Include="_assets\closeIcon24px.png" />
+    <Content Include="_assets\emailIcon32px.png" />
+    <Content Include="_assets\passwordIcon32px.png" />
+    <Content Include="_assets\userIcon32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
