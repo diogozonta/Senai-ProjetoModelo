@@ -179,6 +179,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="_assets\iconeUsuario.png" />
     <Content Include="_assets\configuracoesIcon.png" />
     <Content Include="_assets\relatorioIcon.png" />
     <Content Include="_assets\cidadeIcon.png" />
