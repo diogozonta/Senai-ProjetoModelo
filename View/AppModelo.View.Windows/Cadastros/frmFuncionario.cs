@@ -127,7 +127,7 @@ namespace AppModelo.View.Windows.Cadastros
                 var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
                 int numero = int.Parse(txtNumero.Text);
 
-                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtLogradouro.Text, numero, txtComplemento.Text, txtBairro.Text, txtMunicipio.Text, txtUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex + 1);
+                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtLogradouro.Text, numero, txtComplemento.Text, txtBairro.Text, txtMunicipio.Text, txtUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex + 1, txtCpf.Text);
 
                 if (salvou)
                 {

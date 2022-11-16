@@ -1,4 +1,6 @@
-﻿namespace AppModelo.View.Windows.Cadastros
+﻿using System.Drawing;
+
+namespace AppModelo.View.Windows.Cadastros
 {
     partial class frmFuncionario
     {
@@ -52,21 +54,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtLogradouro = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtMunicipio = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.btnPreencher = new System.Windows.Forms.Button();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtUf = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.btnPreencher = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtMunicipio = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
@@ -332,16 +334,16 @@
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.txtUf);
+            this.groupBox4.Controls.Add(this.txtLogradouro);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.txtNumero);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.txtComplemento);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.txtMunicipio);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.txtNumero);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.txtBairro);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.txtLogradouro);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(358, 132);
@@ -351,50 +353,66 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Endereço";
             // 
-            // txtLogradouro
+            // btnPreencher
             // 
-            this.txtLogradouro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogradouro.Location = new System.Drawing.Point(6, 52);
-            this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.Size = new System.Drawing.Size(157, 23);
-            this.txtLogradouro.TabIndex = 10;
+            this.btnPreencher.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreencher.ForeColor = System.Drawing.Color.Black;
+            this.btnPreencher.Location = new System.Drawing.Point(185, 153);
+            this.btnPreencher.Name = "btnPreencher";
+            this.btnPreencher.Size = new System.Drawing.Size(104, 23);
+            this.btnPreencher.TabIndex = 23;
+            this.btnPreencher.Text = "Preencher";
+            this.btnPreencher.UseVisualStyleBackColor = true;
+            this.btnPreencher.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
-            // label10
+            // txtCep
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(3, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 17);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Logradouro";
+            this.txtCep.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(9, 153);
+            this.txtCep.Mask = "#####-###";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(157, 23);
+            this.txtCep.TabIndex = 16;
             // 
-            // label11
+            // label16
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(166, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 17);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Bairro";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(6, 133);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 17);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "CEP";
             // 
-            // txtBairro
+            // label15
             // 
-            this.txtBairro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(169, 52);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(108, 23);
-            this.txtBairro.TabIndex = 11;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(329, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(26, 17);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "UF";
+            // 
+            // txtUf
+            // 
+            this.txtUf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUf.Enabled = false;
+            this.txtUf.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUf.Location = new System.Drawing.Point(332, 52);
+            this.txtUf.Name = "txtUf";
+            this.txtUf.Size = new System.Drawing.Size(46, 23);
+            this.txtUf.TabIndex = 12;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(280, 29);
+            this.label12.Location = new System.Drawing.Point(6, 84);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 17);
             this.label12.TabIndex = 14;
@@ -403,36 +421,17 @@
             // txtNumero
             // 
             this.txtNumero.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(283, 52);
+            this.txtNumero.Location = new System.Drawing.Point(9, 107);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(95, 23);
-            this.txtNumero.TabIndex = 12;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(3, 84);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 17);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Município";
-            // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMunicipio.Location = new System.Drawing.Point(6, 107);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(157, 23);
-            this.txtMunicipio.TabIndex = 13;
+            this.txtNumero.Size = new System.Drawing.Size(109, 23);
+            this.txtNumero.TabIndex = 13;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(166, 84);
+            this.label14.Location = new System.Drawing.Point(121, 84);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(105, 17);
             this.label14.TabIndex = 18;
@@ -441,61 +440,74 @@
             // txtComplemento
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(169, 107);
+            this.txtComplemento.Location = new System.Drawing.Point(124, 107);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(157, 23);
+            this.txtComplemento.Size = new System.Drawing.Size(134, 23);
             this.txtComplemento.TabIndex = 14;
             // 
-            // label15
+            // label13
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(329, 84);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(26, 17);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "UF";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(157, 29);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 17);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Município";
             // 
-            // txtUf
+            // txtMunicipio
             // 
-            this.txtUf.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUf.Location = new System.Drawing.Point(332, 107);
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(46, 23);
-            this.txtUf.TabIndex = 15;
+            this.txtMunicipio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMunicipio.Enabled = false;
+            this.txtMunicipio.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMunicipio.Location = new System.Drawing.Point(160, 52);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(166, 23);
+            this.txtMunicipio.TabIndex = 11;
             // 
-            // label16
+            // label11
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(58, 133);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 17);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "CEP";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(7, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 17);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Bairro";
             // 
-            // txtCep
+            // txtBairro
             // 
-            this.txtCep.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(61, 153);
-            this.txtCep.Mask = "#####-###";
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(157, 23);
-            this.txtCep.TabIndex = 16;
+            this.txtBairro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBairro.Enabled = false;
+            this.txtBairro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(10, 52);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(144, 23);
+            this.txtBairro.TabIndex = 10;
             // 
-            // btnPreencher
+            // label10
             // 
-            this.btnPreencher.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPreencher.ForeColor = System.Drawing.Color.Black;
-            this.btnPreencher.Location = new System.Drawing.Point(224, 153);
-            this.btnPreencher.Name = "btnPreencher";
-            this.btnPreencher.Size = new System.Drawing.Size(104, 23);
-            this.btnPreencher.TabIndex = 23;
-            this.btnPreencher.Text = "Preencher";
-            this.btnPreencher.UseVisualStyleBackColor = true;
-            this.btnPreencher.Click += new System.EventHandler(this.btnPesquisarCep_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(261, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 17);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Logradouro";
+            // 
+            // txtLogradouro
+            // 
+            this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogradouro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogradouro.Location = new System.Drawing.Point(264, 108);
+            this.txtLogradouro.Name = "txtLogradouro";
+            this.txtLogradouro.Size = new System.Drawing.Size(114, 23);
+            this.txtLogradouro.TabIndex = 15;
             // 
             // btnCadastrarFuncionario
             // 

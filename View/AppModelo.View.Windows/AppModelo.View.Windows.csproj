@@ -47,18 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atualizar\frmAtualizarNacionalidades.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Atualizar\frmAtualizarNacionalidades.Designer.cs">
-      <DependentUpon>frmAtualizarNacionalidades.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Atualizar\frmAtualizarNaturalidades.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Atualizar\frmAtualizarNaturalidades.Designer.cs">
-      <DependentUpon>frmAtualizarNaturalidades.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cadastros\frmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,18 +64,6 @@
     </Compile>
     <Compile Include="Cadastros\frmNaturalidade.Designer.cs">
       <DependentUpon>frmNaturalidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Deletar\frmDeletarNacionalidade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Deletar\frmDeletarNacionalidade.Designer.cs">
-      <DependentUpon>frmDeletarNacionalidade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Deletar\frmDeletarNaturalidade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Deletar\frmDeletarNaturalidade.Designer.cs">
-      <DependentUpon>frmDeletarNaturalidade.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -112,12 +88,6 @@
     <Compile Include="Helpers\LimparTela.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Atualizar\frmAtualizarNacionalidades.resx">
-      <DependentUpon>frmAtualizarNacionalidades.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Atualizar\frmAtualizarNaturalidades.resx">
-      <DependentUpon>frmAtualizarNaturalidades.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\frmFuncionario.resx">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,12 +96,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\frmNaturalidade.resx">
       <DependentUpon>frmNaturalidade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Deletar\frmDeletarNacionalidade.resx">
-      <DependentUpon>frmDeletarNacionalidade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Deletar\frmDeletarNaturalidade.resx">
-      <DependentUpon>frmDeletarNaturalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

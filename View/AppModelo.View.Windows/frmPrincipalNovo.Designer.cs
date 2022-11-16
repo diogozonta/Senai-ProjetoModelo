@@ -187,7 +187,7 @@
             this.lblNomeUsuario.AutoSize = true;
             this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
-            this.lblNomeUsuario.Location = new System.Drawing.Point(12, 88);
+            this.lblNomeUsuario.Location = new System.Drawing.Point(12, 98);
             this.lblNomeUsuario.Name = "lblNomeUsuario";
             this.lblNomeUsuario.Size = new System.Drawing.Size(81, 17);
             this.lblNomeUsuario.TabIndex = 1;
