@@ -37,13 +37,13 @@
             this.btnNovaNaturalidade = new System.Windows.Forms.Button();
             this.btnNovoFuncionario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblInfoUsuario = new System.Windows.Forms.Label();
             this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlPainelAberto = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnFecharPrincipal = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,6 +173,17 @@
             this.panel2.Size = new System.Drawing.Size(186, 144);
             this.panel2.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(12, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Início da sessão";
+            // 
             // lblInfoUsuario
             // 
             this.lblInfoUsuario.AutoSize = true;
@@ -218,7 +229,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(192, 38);
+            this.lblTitulo.Location = new System.Drawing.Point(192, 22);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(167, 31);
             this.lblTitulo.TabIndex = 2;
@@ -235,17 +246,6 @@
             this.btnFecharPrincipal.TabIndex = 3;
             this.btnFecharPrincipal.UseVisualStyleBackColor = true;
             this.btnFecharPrincipal.Click += new System.EventHandler(this.btnFecharPrincipal_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(12, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Início da sessão";
             // 
             // frmPrincipalNovo
             // 

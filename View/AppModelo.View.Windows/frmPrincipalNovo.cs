@@ -86,6 +86,13 @@ namespace AppModelo.View.Windows
             pnlNav.Top = btnRelatorio.Top;
             pnlNav.Left = btnRelatorio.Left;
             btnRelatorio.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitulo.Text = "Relatório de Funcionários";
+            this.pnlPainelAberto.Controls.Clear();
+            Relatorios.frmRelatorioFuncionario frmRelatorioFuncionario = new Relatorios.frmRelatorioFuncionario() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmRelatorioFuncionario.FormBorderStyle = FormBorderStyle.None;
+            this.pnlPainelAberto.Controls.Add(frmRelatorioFuncionario);
+            frmRelatorioFuncionario.Show();
         }
 
         private void btnNovoFuncionario_Leave(object sender, EventArgs e)

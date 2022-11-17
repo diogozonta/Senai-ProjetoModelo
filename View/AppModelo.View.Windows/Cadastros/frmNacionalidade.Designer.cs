@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnDeletar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -104,22 +104,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operação";
             // 
-            // btnDeletar
-            // 
-            this.btnDeletar.AutoSize = true;
-            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnDeletar.FlatAppearance.BorderSize = 0;
-            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletar.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.btnDeletar.ForeColor = System.Drawing.Color.White;
-            this.btnDeletar.Location = new System.Drawing.Point(219, 53);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(87, 30);
-            this.btnDeletar.TabIndex = 11;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.AutoSize = true;
@@ -151,6 +135,22 @@
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.AutoSize = true;
+            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnDeletar.FlatAppearance.BorderSize = 0;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDeletar.ForeColor = System.Drawing.Color.White;
+            this.btnDeletar.Location = new System.Drawing.Point(219, 53);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(87, 30);
+            this.btnDeletar.TabIndex = 11;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // frmNacionalidade
             // 

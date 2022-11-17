@@ -51,6 +51,5 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
-
     }
 }
