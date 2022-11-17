@@ -27,9 +27,13 @@ namespace AppModelo.View.Windows.Cadastros
 
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+            cmbNacionalidade.ValueMember = "Id";
+
 
             cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidades();
             cmbNaturalidade.DisplayMember = "Descricao";
+            cmbNaturalidade.ValueMember = "Id";
+
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
@@ -127,7 +131,10 @@ namespace AppModelo.View.Windows.Cadastros
                 var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
                 int numero = int.Parse(txtNumero.Text);
 
-                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtLogradouro.Text, numero, txtComplemento.Text, txtBairro.Text, txtMunicipio.Text, txtUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex + 1, txtCpf.Text);
+                int idNacionalidade = int.Parse(cmbNacionalidade.GetItemText(cmbNacionalidade.SelectedValue));
+                int idNaturalidade = int.Parse(cmbNaturalidade.GetItemText(cmbNaturalidade.SelectedValue));
+
+                var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtLogradouro.Text, numero, txtComplemento.Text, txtBairro.Text, txtMunicipio.Text, txtUf.Text, idNacionalidade, idNaturalidade, txtCpf.Text);  ;
 
                 if (salvou)
                 {

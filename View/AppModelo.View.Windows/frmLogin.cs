@@ -19,12 +19,15 @@ namespace AppModelo.View.Windows
     {
         //Crio uma variável global para colocar no txtEmail
         public static string SetNomeUsuario = "";
+        public static string HoraLogin = "";
 
         public frmLogin()
         {
             InitializeComponent();
             txtEmail.Text = "diogo@email.com";
             txtSenha.Text = "E16E4649";
+
+            HoraLogin = DateTime.Now.ToString("u");
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

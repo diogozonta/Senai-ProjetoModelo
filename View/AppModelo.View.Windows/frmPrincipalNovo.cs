@@ -32,6 +32,7 @@ namespace AppModelo.View.Windows
         {
             //No load do programa coloco a variável global(que veio do frmLogin) dentro do meu lblNomeUsuario(local do frmPrincipalNovo)
             lblNomeUsuario.Text = frmLogin.SetNomeUsuario;
+            lblInfoUsuario.Text = frmLogin.HoraLogin;
         }
 
         private void btnNovoFuncionario_Click(object sender, EventArgs e)

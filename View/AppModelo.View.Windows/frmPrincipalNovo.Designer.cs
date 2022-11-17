@@ -37,12 +37,13 @@
             this.btnNovaNaturalidade = new System.Windows.Forms.Button();
             this.btnNovoFuncionario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblInfoUsuario = new System.Windows.Forms.Label();
             this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlPainelAberto = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnFecharPrincipal = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -162,7 +163,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblInfoUsuario);
             this.panel2.Controls.Add(this.lblNomeUsuario);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -171,23 +173,23 @@
             this.panel2.Size = new System.Drawing.Size(186, 144);
             this.panel2.TabIndex = 0;
             // 
-            // label2
+            // lblInfoUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
-            this.label2.Location = new System.Drawing.Point(12, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Algum texto sobre usuario";
+            this.lblInfoUsuario.AutoSize = true;
+            this.lblInfoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
+            this.lblInfoUsuario.Location = new System.Drawing.Point(13, 128);
+            this.lblInfoUsuario.Name = "lblInfoUsuario";
+            this.lblInfoUsuario.Size = new System.Drawing.Size(153, 13);
+            this.lblInfoUsuario.TabIndex = 2;
+            this.lblInfoUsuario.Text = "Algum texto sobre usuario";
             // 
             // lblNomeUsuario
             // 
             this.lblNomeUsuario.AutoSize = true;
             this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
-            this.lblNomeUsuario.Location = new System.Drawing.Point(12, 98);
+            this.lblNomeUsuario.Location = new System.Drawing.Point(12, 88);
             this.lblNomeUsuario.Name = "lblNomeUsuario";
             this.lblNomeUsuario.Size = new System.Drawing.Size(81, 17);
             this.lblNomeUsuario.TabIndex = 1;
@@ -234,6 +236,17 @@
             this.btnFecharPrincipal.UseVisualStyleBackColor = true;
             this.btnFecharPrincipal.Click += new System.EventHandler(this.btnFecharPrincipal_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(12, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Início da sessão";
+            // 
             // frmPrincipalNovo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +276,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnNovoFuncionario;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblInfoUsuario;
         private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlNav;
@@ -274,5 +287,6 @@
         private System.Windows.Forms.Panel pnlPainelAberto;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnFecharPrincipal;
+        private System.Windows.Forms.Label label1;
     }
 }
