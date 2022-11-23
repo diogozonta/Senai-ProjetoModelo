@@ -59,6 +59,8 @@ namespace AppModelo.View.Windows.Cadastros
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtUf = new System.Windows.Forms.TextBox();
+            this.txtLogradouro = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -67,8 +69,6 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
@@ -96,6 +96,7 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(131, 23);
             this.txtNome.TabIndex = 1;
+            this.txtNome.Tag = "Obrigatorio";
             this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
             // label2
@@ -117,6 +118,7 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(157, 23);
             this.txtDataNascimento.TabIndex = 2;
+            this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.Validated += new System.EventHandler(this.txtDataNascimento_Validated);
             // 
             // txtCpf
@@ -127,6 +129,7 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(102, 23);
             this.txtCpf.TabIndex = 3;
+            this.txtCpf.Tag = "Obrigatorio";
             this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
             // 
             // label3
@@ -284,6 +287,7 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(157, 23);
             this.txtTelefone.TabIndex = 7;
+            this.txtTelefone.Tag = "Obrigatorio";
             // 
             // txtEmail
             // 
@@ -292,6 +296,7 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(297, 23);
             this.txtEmail.TabIndex = 9;
+            this.txtEmail.Tag = "Obrigatorio";
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label9
@@ -407,6 +412,26 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtUf.Size = new System.Drawing.Size(46, 23);
             this.txtUf.TabIndex = 12;
             // 
+            // txtLogradouro
+            // 
+            this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogradouro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogradouro.Location = new System.Drawing.Point(264, 108);
+            this.txtLogradouro.Name = "txtLogradouro";
+            this.txtLogradouro.Size = new System.Drawing.Size(114, 23);
+            this.txtLogradouro.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(261, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 17);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Logradouro";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -488,26 +513,6 @@ namespace AppModelo.View.Windows.Cadastros
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(144, 23);
             this.txtBairro.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(261, 85);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 17);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Logradouro";
-            // 
-            // txtLogradouro
-            // 
-            this.txtLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLogradouro.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogradouro.Location = new System.Drawing.Point(264, 108);
-            this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.Size = new System.Drawing.Size(114, 23);
-            this.txtLogradouro.TabIndex = 15;
             // 
             // btnCadastrarFuncionario
             // 

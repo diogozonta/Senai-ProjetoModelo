@@ -45,6 +45,7 @@ namespace AppModelo.View.Windows
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblEsqueciSenha = new System.Windows.Forms.LinkLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,7 +79,7 @@ namespace AppModelo.View.Windows
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(125, 396);
+            this.btnEntrar.Location = new System.Drawing.Point(124, 370);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(131, 42);
             this.btnEntrar.TabIndex = 3;
@@ -124,7 +125,7 @@ namespace AppModelo.View.Windows
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 457);
+            this.label3.Location = new System.Drawing.Point(15, 438);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 18);
             this.label3.TabIndex = 7;
@@ -134,7 +135,7 @@ namespace AppModelo.View.Windows
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Historic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(190, 456);
+            this.linkLabel1.Location = new System.Drawing.Point(189, 437);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(175, 38);
             this.linkLabel1.TabIndex = 8;
@@ -150,6 +151,7 @@ namespace AppModelo.View.Windows
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(27, 23);
             this.btnFechar.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.btnFechar, "Fechar");
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             this.btnFechar.MouseLeave += new System.EventHandler(this.btnFechar_MouseLeave);
@@ -193,7 +195,7 @@ namespace AppModelo.View.Windows
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(378, 497);
+            this.ClientSize = new System.Drawing.Size(378, 478);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnFechar);
@@ -234,5 +236,6 @@ namespace AppModelo.View.Windows
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel lblEsqueciSenha;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

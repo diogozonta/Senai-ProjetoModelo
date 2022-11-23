@@ -12,9 +12,8 @@ using System.Windows.Forms;
 namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmNacionalidade : Form
-    {
+    { 
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
-
         public frmNacionalidade()
         {
             InitializeComponent();

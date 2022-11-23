@@ -95,6 +95,21 @@ namespace AppModelo.View.Windows
             frmRelatorioFuncionario.Show();
         }
 
+        private void btnConfiguracoes_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnConfiguracoes.Height;
+            pnlNav.Top = btnConfiguracoes.Top;
+            pnlNav.Left = btnConfiguracoes.Left;
+            btnConfiguracoes.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitulo.Text = "Configurações";
+            this.pnlPainelAberto.Controls.Clear();
+            frmConfiguracoes frmConfiguracoes = new frmConfiguracoes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmConfiguracoes.FormBorderStyle = FormBorderStyle.None;
+            this.pnlPainelAberto.Controls.Add(frmConfiguracoes);
+            frmConfiguracoes.Show();
+        }
+
         private void btnNovoFuncionario_Leave(object sender, EventArgs e)
         {
             btnNovoFuncionario.BackColor = Color.FromArgb(24, 30, 54);
@@ -118,6 +133,11 @@ namespace AppModelo.View.Windows
         private void btnFecharPrincipal_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnConfiguracoes_Leave(object sender, EventArgs e)
+        {
+            btnConfiguracoes.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }

@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnRelatorio = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnConfiguracoes = new System.Windows.Forms.Button();
             this.btnNovaNacionalidade = new System.Windows.Forms.Button();
             this.btnNovaNaturalidade = new System.Windows.Forms.Button();
             this.btnNovoFuncionario = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.pnlNav);
             this.panel1.Controls.Add(this.btnRelatorio);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnConfiguracoes);
             this.panel1.Controls.Add(this.btnNovaNacionalidade);
             this.panel1.Controls.Add(this.btnNovaNaturalidade);
             this.panel1.Controls.Add(this.btnNovoFuncionario);
@@ -91,21 +91,23 @@
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             this.btnRelatorio.Leave += new System.EventHandler(this.btnRelatorio_Leave);
             // 
-            // button4
+            // btnConfiguracoes
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 531);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(186, 46);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Configurações";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnConfiguracoes.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracoes.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnConfiguracoes.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracoes.Image")));
+            this.btnConfiguracoes.Location = new System.Drawing.Point(0, 531);
+            this.btnConfiguracoes.Name = "btnConfiguracoes";
+            this.btnConfiguracoes.Size = new System.Drawing.Size(186, 46);
+            this.btnConfiguracoes.TabIndex = 4;
+            this.btnConfiguracoes.Text = "Configurações";
+            this.btnConfiguracoes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
+            this.btnConfiguracoes.Leave += new System.EventHandler(this.btnConfiguracoes_Leave);
             // 
             // btnNovaNacionalidade
             // 
@@ -280,7 +282,7 @@
         private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlNav;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnConfiguracoes;
         private System.Windows.Forms.Button btnNovaNacionalidade;
         private System.Windows.Forms.Button btnNovaNaturalidade;
         private System.Windows.Forms.Button btnRelatorio;

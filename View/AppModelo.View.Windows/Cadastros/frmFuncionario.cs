@@ -57,6 +57,7 @@ namespace AppModelo.View.Windows.Cadastros
             if (txtNome.Text.Length < 6)
             {
                 errorProvider.SetError(txtNome, "Digite seu nome completo");
+                btnCadastrarFuncionario.Enabled = false;
                 return;
             }
 
@@ -66,10 +67,13 @@ namespace AppModelo.View.Windows.Cadastros
                 if (char.IsNumber(letra))
                 {
                     errorProvider.SetError(txtNome, "Um nome não pode conter números");
+                    btnCadastrarFuncionario.Enabled = false;
                     return;
                 }
             }
 
+
+            btnCadastrarFuncionario.Enabled = true;
             errorProvider.Clear();
 
         }
@@ -82,9 +86,11 @@ namespace AppModelo.View.Windows.Cadastros
             if (cpfEhValido is false)
             {
                 errorProvider.SetError(txtCpf, "CPF inválido!");
+                btnCadastrarFuncionario.Enabled = false;
                 return;
             }
 
+            btnCadastrarFuncionario.Enabled = true;
             errorProvider.Clear();
         }
 
@@ -96,9 +102,11 @@ namespace AppModelo.View.Windows.Cadastros
             if (emailEhValido is false)
             {
                 errorProvider.SetError(txtEmail, "E-mail inválido!");
+                btnCadastrarFuncionario.Enabled = false;
                 return;
             }
 
+            btnCadastrarFuncionario.Enabled = true;
             errorProvider.Clear();
         }
 
@@ -112,6 +120,7 @@ namespace AppModelo.View.Windows.Cadastros
                 if (dataNascimento > dataHoje)
                 {
                     errorProvider.SetError(txtDataNascimento, "Você não pode informar a data de hoje");
+                    btnCadastrarFuncionario.Enabled = false;
                     return;
                 }
 
@@ -119,6 +128,7 @@ namespace AppModelo.View.Windows.Cadastros
             }
             catch (Exception)
             {
+                btnCadastrarFuncionario.Enabled = true;
                 return;
             }
 
