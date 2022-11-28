@@ -16,10 +16,24 @@ namespace AppModelo.View.Windows.Cadastros
 {
     public partial class frmFuncionario : Form
     {
+        /// <summary>
+        /// Instância a classe FuncionarioController em uma propriedade para utilizá-la onde necessário
+        /// </summary>
         private FuncionarioController _funcionarioController = new FuncionarioController();
+        /// <summary>
+        /// Instância a classe NacionalidadeController em uma propriedade para utilizá-la onde necessário
+        /// </summary>
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+        /// <summary>
+        /// Instância a classe NaturalidadeController em uma propriedade para utilizá-la onde necessário
+        /// </summary>
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
 
+        /// <summary>
+        /// Class <c>frmFuncionario</c> contrutor chamada o metódo FormatarCamposObrigatorios para indicar
+        /// o usuário quais os campos são obrigados a preencher.
+        /// Também chama o metódo ObterTodasNacionalidades/ObterTodasNaturalidades dentro de uma combo box
+        /// </summary>
         public frmFuncionario()
         {
             InitializeComponent();
@@ -35,6 +49,7 @@ namespace AppModelo.View.Windows.Cadastros
             cmbNaturalidade.ValueMember = "Id";
 
         }
+
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
@@ -161,9 +176,9 @@ namespace AppModelo.View.Windows.Cadastros
                     MessageBox.Show("Erro ao cadastrar usuário");
                 }
             }
-            catch (Exception)
+            catch (Exception e1)
             {
-                MessageBox.Show("Ocorreu algum problema ao cadastrar no banco de dados, verifique os dados colocados novamente.", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu algum problema ao cadastrar no banco de dados, verifique os dados colocados novamente. " + e1.Message, "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
