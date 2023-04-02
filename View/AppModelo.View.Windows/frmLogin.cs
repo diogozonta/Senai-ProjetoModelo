@@ -24,8 +24,8 @@ namespace AppModelo.View.Windows
         public frmLogin()
         {
             InitializeComponent();
-            txtEmail.Text = "diogo@email.com";
-            txtSenha.Text = "E16E4649";
+            txtEmail.Text = "admin@gmail.com";
+            txtSenha.Text = "123";
 
             HoraLogin = DateTime.Now.ToString("u");
         }
